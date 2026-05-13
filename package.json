@@ -1,0 +1,30 @@
+{
+  "name": "@manteclaw/mcp-selfhealing",
+  "version": "1.0.0",
+  "description": "MCP server that provides self-healing API execution with automatic retry, circuit breaker, and fallback strategies",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "mcp-selfhealing": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "keywords": ["mcp", "self-healing", "retry", "circuit-breaker", "resilience"],
+  "author": "Manteclaw",
+  "license": "MIT",
+  "smithery": {
+    "name": "Self-Healing API Executor",
+    "description": "Execute API calls with automatic retry, circuit breaker protection, and intelligent fallback. Survives rate limits, timeouts, and provider failures.",
+    "icon": "🛡️",
+    "category": "infrastructure",
+    "pricing": {
+      "model": "per-call",
+      "amount": 0.005,
+      "currency": "USDC"
+    }
+  }
+}
