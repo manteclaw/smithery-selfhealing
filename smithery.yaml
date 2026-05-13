@@ -1,0 +1,39 @@
+name: mcp-selfhealing
+display_name: Self-Healing API Executor
+description: >
+  Execute API calls with automatic retry, circuit breaker, and fallback.
+  Features exponential backoff, health monitoring, and timeout protection.
+version: 1.0.0
+author: manteclaw
+license: MIT
+repository: https://github.com/manteclaw/smithery-selfhealing
+homepage: https://github.com/manteclaw/smithery-selfhealing#readme
+categories:
+  - api
+  - resilience
+  - devops
+  - monitoring
+tags:
+  - api
+  - retry
+  - circuit-breaker
+  - resilience
+  - monitoring
+  - fallback
+  - http
+  - devops
+runtime: node
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    properties: {}
+  commandFunction: |-
+    (config) => ({ command: 'node', args: ['index.js'] })
+tools:
+  - name: execute_with_retry
+    description: Execute any HTTP API call with automatic retry and circuit breaker.
+  - name: check_health
+    description: Check circuit breaker state for a service.
+  - name: reset_circuit_breaker
+    description: Manually reset a tripped circuit breaker.
